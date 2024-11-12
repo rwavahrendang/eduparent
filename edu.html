@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Form Identitas</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Font Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #15745C; /* Warna utama tema */
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+    .container-custom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      padding: 0 20px;
+      background-image: url('pattern.png'); /* Placeholder untuk pattern sesuai gambar */
+      background-size: cover;
+      background-position: center;
+    }
+    .card-custom {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      width: 100%;
+      max-width: 400px;
+      margin-top: 20px;
+    }
+    .form-label {
+      font-weight: 600;
+    }
+    .form-control {
+      border-radius: 10px;
+      height: 45px;
+    }
+    .btn-submit {
+      background-color: #FF8F67; /* Warna tombol sesuai tema */
+      color: white;
+      font-weight: 600;
+      border-radius: 10px;
+      width: 100%;
+      height: 50px;
+    }
+    .btn-submit:hover {
+      background-color: #e97e56;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 576px) {
+      h2 {
+        font-size: 1.2rem;
+      }
+      .form-control {
+        height: 40px;
+      }
+      .btn-submit {
+        height: 45px;
+      }
+    }
+  </style>
+</head>
+<body class="col-sm-4 mx-auto">
+  <div class="">
+    <div class="card-custom text-center shadow">
+      <h2 class="mb-4">Silakan masukkan identitas diri Anda</h2>
+      <form>
+        <div class="mb-3 text-start">
+          <label for="name" class="form-label">Nama :</label>
+          <input type="text" class="form-control" id="name" placeholder="Masukkan nama Anda">
+        </div>
+        <div class="mb-3 text-start">
+          <label for="age" class="form-label">Usia :</label>
+          <input type="number" class="form-control" id="age" placeholder="Masukkan usia Anda">
+        </div>
+        <div class="mb-3 text-start">
+          <label for="gender" class="form-label">Jenis Kelamin :</label>
+          <input type="text" class="form-control" id="gender" placeholder="Masukkan jenis kelamin">
+        </div>
+        <div class="mb-4 text-start">
+          <label for="maritalStatus" class="form-label">Status Pernikahan :</label>
+          <input type="text" class="form-control" id="maritalStatus" placeholder="Masukkan status pernikahan">
+        </div>
+        <button type="submit" class="btn btn-submit">Selanjutnya</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
