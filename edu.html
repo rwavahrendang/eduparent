@@ -26,8 +26,20 @@
       background-size: cover;
       background-position: center;
     }
+    .android-frame {
+      width: 50vw;
+      height: 100vh;
+      max-width: 412px; 
+      max-height: 917px; 
+      background-image: url('./assets/background.png');
+      background-size: cover;
+      border-radius: 16px; 
+      border: 5px solid #333333;
+      position: relative;
+      margin: 0 auto;
+      overflow: hidden;
+    }
     .card-custom {
-      background-color: #fff;
       border-radius: 15px;
       padding: 20px;
       width: 100%;
@@ -36,6 +48,7 @@
     }
     .form-label {
       font-weight: 600;
+      color: white;
     }
     .form-control {
       border-radius: 10px;
@@ -48,9 +61,18 @@
       border-radius: 10px;
       width: 100%;
       height: 50px;
+      margin-top: 150px;
     }
     .btn-submit:hover {
       background-color: #e97e56;
+    }
+    .headline {
+      background-color: white;
+      border-radius: 30px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-right: 10px;
+      padding-left: 10px;
     }
     /* Responsive adjustments */
     @media (max-width: 576px) {
@@ -67,9 +89,13 @@
   </style>
 </head>
 <body class="col-sm-4 mx-auto">
+  <div class="container d-flex justify-content-center align-items-center">
+    <div class="android-frame bg-image">
   <div class="">
-    <div class="card-custom text-center shadow">
-      <h2 class="mb-4">Silakan masukkan identitas diri Anda</h2>
+    <div class="card-custom text-center">
+      <h2 class="mb-4 headline">
+        <span>Silakan masukkan identitas diri Anda</span>
+      </h2>
       <form>
         <div class="mb-3 text-start">
           <label for="name" class="form-label">Nama :</label>
@@ -80,17 +106,28 @@
           <input type="number" class="form-control" id="age" placeholder="Masukkan usia Anda">
         </div>
         <div class="mb-3 text-start">
-          <label for="gender" class="form-label">Jenis Kelamin :</label>
-          <input type="text" class="form-control" id="gender" placeholder="Masukkan jenis kelamin">
+          <label for="age" class="form-label">Jenis Kelamin :</label>
+          <select class="form-select form-control" id="gender">
+            <option selected disabled>Pilih jenis kelamin</option>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+          </select>
         </div>
         <div class="mb-4 text-start">
           <label for="maritalStatus" class="form-label">Status Pernikahan :</label>
           <input type="text" class="form-control" id="maritalStatus" placeholder="Masukkan status pernikahan">
         </div>
-        <button type="submit" class="btn btn-submit">Selanjutnya</button>
+        <button type="submit" class="btn btn-submit" onclick="nextPage()">Selanjutnya</button>
       </form>
     </div>
   </div>
+
+
+  <script>
+    function nextPage() {
+      document.location.href = ""
+    }
+  </script>
 
   <!-- Bootstrap JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
